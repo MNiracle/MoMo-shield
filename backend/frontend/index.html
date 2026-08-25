@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoMoShield — Payment Safety</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="brand">
+            <div class="shield">🛡️</div>
+            <div>
+                <h1>MoMoShield</h1>
+                <span>Intelligent Trust & Safety</span>
+            </div>
+        </div>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            Protection Online
+        </div>
+    </header>
+
+    <main class="container">
+       
+ <section class="hero">
+
+    <div class="hero-shield">
+        🛡️
+    </div>
+
+    <p class="eyebrow">
+        INTELLIGENT PAYMENT PROTECTION
+    </p>
+
+    <h2>
+        Send money with<br>
+        <span>confidence.</span>
+    </h2>
+
+    <p>
+        MoMoShield analyzes transaction risk, checks recipient
+        trust signals, and helps you make a safer decision
+        before your payment is sent.
+    </p>
+
+    <div class="hero-points">
+
+        <span>✓ Risk Analysis</span>
+        <span>✓ Recipient Verification</span>
+        <span>✓ Pre-payment Protection</span>
+
+    </div>
+
+</section>
+
+        <section class="payment-card">
+
+            <div class="card-header">
+                <h3>Send Money</h3>
+                <span>🛡️ Protected</span>
+            </div>
+
+            <div class="form-group">
+                <label for="recipient">Recipient Mobile Number</label>
+                <input
+                    type="text"
+                    id="recipient"
+                    placeholder="e.g. 0241234567"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="amount">Amount</label>
+
+                <div class="amount-input">
+                    <span>GH₵</span>
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="0.00"
+                        min="1"
+                    >
+                </div>
+            </div>
+
+            <button id="analyzeBtn">
+                🛡️ Analyze Transaction
+            </button>
+
+            <p class="privacy-note">
+                Your transaction is checked before payment.
+            </p>
+
+        </section>
+
+        <section id="resultSection" class="result-section hidden">
+
+            <div id="riskBadge" class="risk-badge"></div>
+
+            <div class="score-container">
+
+    <div class="score-circle">
+
+        <div class="score-inner">
+            <strong id="riskScore">0</strong>
+            <span>/100</span>
+        </div>
+
+    </div>
+
+</div>
+
+            <h3 id="riskTitle"></h3>
+
+            <p id="recommendation"></p>
+
+            <div class="signals-card">
+                <h4>Why did we give this result?</h4>
+                <ul id="signalsList"></ul>
+            </div>
+
+          <div class="actions">
+
+    <button id="verifyBtn" class="secondary-btn">
+        Verify Recipient
+    </button>
+
+    <button id="proceedBtn" class="proceed-btn">
+        Proceed Anyway
+    </button>
+
+    <button id="cancelBtn" class="danger-btn">
+        Cancel Transaction
+    </button>
+
+</div>
+
+        </section>
+         <section class="dashboard">
+
+    <div class="dashboard-header">
+        <div>
+            <p class="eyebrow">SAFETY CENTER</p>
+            <h2>Your MoMoShield Protection</h2>
+        </div>
+
+        <span class="dashboard-badge">
+            🛡️ Active
+        </span>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stat-card">
+            <span>🛡️</span>
+            <strong id="protectedCount">0</strong>
+            <p>Transactions Assessed</p>
+        </div>
+
+        <div class="stat-card">
+            <span>⚠️</span>
+            <strong id="riskCount">0</strong>
+            <p>Risks Detected</p>
+        </div>
+
+        <div class="stat-card">
+            <span>🛑</span>
+            <strong id="cancelledCount">0</strong>
+            <p>Transactions Cancelled</p>
+        </div>
+
+    </div>
+
+    <div class="activity-card">
+
+        <div class="activity-header">
+            <h3>Recent Safety Activity</h3>
+
+            <button id="clearHistoryBtn">
+                Clear
+            </button>
+        </div>
+
+        <div id="activityList">
+
+            <div class="empty-activity">
+                No transactions assessed yet.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <footer>
+        <p>MoMoShield MVP • Trust before transaction</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
