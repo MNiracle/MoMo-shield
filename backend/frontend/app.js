@@ -23,7 +23,7 @@ analyzeBtn.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/api/risk/analyze",
+            "https://momo-shield-api.onrender.com/api/risk/analyze",
             {
                 method: "POST",
                 headers: {
@@ -259,7 +259,7 @@ document.addEventListener("click", async (event) => {
     try {
 
         const response = await fetch(
-            `http://127.0.0.1:8000/api/recipient/verify/${recipient}`
+            `https://momo-shield-api.onrender.com/api/recipient/verify/${recipient}`
         );
 
         if (!response.ok) {
